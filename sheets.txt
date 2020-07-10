@@ -1,2 +1,11 @@
-1.create the html 
-2.create the navigation bar
+V 1.create the html 
+V 2.create the navigation bar
+
+tasks for tomorrow
+
+0. how to get only 100 coins 
+0.figure out how to make the home function work when window onload =click on demo home 
+1. home.component.html to make the table with the style
+2. make the home.component.js (more info button.)
+
+
