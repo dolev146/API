@@ -1,0 +1,2 @@
+1.create the html 
+2.create the navigation bar
