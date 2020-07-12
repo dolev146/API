@@ -1,5 +1,8 @@
 import { home, about, livereports } from './routes.js';
-window.onload = init;
+window.onload = function () {
+    init();
+    document.querySelector("body > nav > ul > li:nth-child(1) > a")?.click();
+};
 const routes = {
     home,
     about,

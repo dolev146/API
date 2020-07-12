@@ -1,6 +1,11 @@
-import { home,  about, livereports } from './routes.js'
+import { home, about, livereports } from './routes.js'
 
-window.onload = init;
+
+window.onload = function () {
+    init();
+    document.querySelector("body > nav > ul > li:nth-child(1) > a")?.click();
+}
+
 
 const routes = {
     home,
@@ -10,6 +15,8 @@ const routes = {
 
 function init() {
     document.querySelector('nav > ul')?.addEventListener('click', selectRoute)
+    
+
 }
 
 function selectRoute(event : any) {
@@ -20,3 +27,4 @@ function selectRoute(event : any) {
     const outlet = document.querySelector('.link-outlet')
     routes[event.target.textContent.toLowerCase()](outlet) 
 }
+

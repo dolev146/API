@@ -1,8 +1,33 @@
+// import Ajax from './routes.js'
 function home(outlet) {
     if (outlet) {
         outlet.innerHTML = "<h1>HOME</h1>";
         loadContent('./components/home/home.component.html', outlet);
-        loadContent('https://api.coingecko.com/api/v3/coins/list', outlet);
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'https://api.coingecko.com/api/v3/coins/list');
+        xhr.onload = function () {
+            const data = JSON.parse(xhr.responseText);
+            for (var i = 0; i < 100; i++) {
+                console.log(data[i]);
+                var newdiv = document.createElement('div');
+                var toggle_btn = document.createElement('input');
+                var infoLink = document.createElement('a');
+                infoLink.setAttribute('href', 'https://api.coingecko.com/api/v3/coins/list');
+                infoLink.innerHTML = "more Info";
+                toggle_btn.classList.add("toggle_btn");
+                toggle_btn.setAttribute('type', 'checkbox');
+                newdiv.classList.add("div_style");
+                newdiv.innerHTML += `<span>${(data[i].symbol.toUpperCase())}<br><br>
+                ${data[i].name} </span><br>`;
+                outlet.appendChild(newdiv);
+                newdiv.appendChild(toggle_btn);
+                newdiv.appendChild(infoLink);
+                toggle_btn.onclick = function (event) {
+                    alert(event.target.parentElement.innerHTML);
+                };
+            }
+        };
+        xhr.send();
     }
 }
 function livereports(outlet) {
@@ -30,6 +55,7 @@ function loadContent(url, outlet) {
             outlet.innerHTML += xhr.responseText;
         };
         xhr.send();
+        return xhr;
     }
 }
 function loadScript(url) {
