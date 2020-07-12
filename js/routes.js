@@ -7,11 +7,11 @@ function home(outlet) {
         xhr.open('GET', 'https://api.coingecko.com/api/v3/coins/list');
         xhr.onload = function () {
             const data = JSON.parse(xhr.responseText);
-            for (var i = 0; i < 100; i++) {
+            for (let i = 0; i < 100; i++) {
                 console.log(data[i]);
-                var newdiv = document.createElement('div');
-                var toggle_btn = document.createElement('input');
-                var infoLink = document.createElement('a');
+                let newdiv = document.createElement('div');
+                let toggle_btn = document.createElement('input');
+                let infoLink = document.createElement('a');
                 infoLink.setAttribute('href', 'https://api.coingecko.com/api/v3/coins/list');
                 infoLink.innerHTML = "more Info";
                 toggle_btn.classList.add("toggle_btn");
