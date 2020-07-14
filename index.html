@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coins</title>
     <style>
-        .link-outlet{
+        .link-outlet {
             width: 60vw;
             height: 60vh;
             margin-left: auto;
             margin-right: auto;
-            /* margin-left: auto ; */
-            /* display: flex; */
-            /* justify-content: center; */
-            /* flex-direction: column; */
-            /* flex-wrap: wrap; */
-            /* overflow: auto; */
+
         }
-        .containerCoins{
+
+        .containerCoins {
             width: 100%;
             height: 100%;
             display: flex;
@@ -26,20 +23,58 @@
             overflow: auto;
         }
 
-        .Coininside{
+        .Coininside {
             border: 2px solid lightgray;
             width: 32.5%;
             height: 25%;
         }
 
+        ul {
+            border: 1px solid #e7e7e7;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f3f3f3;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        li a:hover {
+            background-color: rgb(150, 150, 150);
+        }
+
+        .active {
+            background-color: #4CA;
+        }
     </style>
 </head>
+
 <body>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">LiveReports</a></li>
             <li><a href="#">About</a></li>
+            <li style="float:right"><a class="active" href="#search">Search</a></li>
         </ul>
     </nav>
     <hr>
@@ -47,4 +82,5 @@
     </div>
     <script src="./js/app.js" type="module"></script>
 </body>
+
 </html>

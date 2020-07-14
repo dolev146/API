@@ -3,7 +3,7 @@ function home(outlet) {
     if (outlet) {
         let homediv = document.createElement("div");
         outlet.appendChild(homediv);
-        homediv.innerHTML = "<div><h1 style=text-align:center>HOME</h1></div>";
+        homediv.innerHTML = "<div><h1 style=text-align:center>List of All the Coins</h1></div>";
         loadContent('./components/home/home.component.html', outlet);
         const xhr = new XMLHttpRequest();
         xhr.open('GET', 'https://api.coingecko.com/api/v3/coins/list');
