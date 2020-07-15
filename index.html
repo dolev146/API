@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coins</title>
     <style>
+        
         .link-outlet {
             width: 60vw;
             height: 60vh;
@@ -57,10 +58,43 @@
             text-decoration: none;
         }
 
-        /* Change the link color to #111 (black) on hover */
+        input {
+            float: right;
+            padding: 6px;
+            border: none;
+            margin-top: 8px;
+            margin-right: 16px;
+            font-size: 17px;
+        }
+
         li a:hover {
             background-color: rgb(150, 150, 150);
         }
+
+        input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+
+         button {
+            padding: 6px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+         li > button + input[type=text]{
+            float:right;
+        }
+
+         button:hover {
+            background: #ccc;
+        }
+
 
         .active {
             background-color: #4CA;
@@ -69,15 +103,23 @@
 </head>
 
 <body>
+    <div style="background-color:lightblue ; height: 10vh;">
+        <h1 style="text-align: center; font-size: 3em;padding-top: 10px;">Cryptonite</h1>
+    </div>
+
+    <hr>
+
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">LiveReports</a></li>
             <li><a href="#">About</a></li>
-            <li style="float:right"><a class="active" href="#search">Search</a></li>
+            <li style="float:right">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+            </li>
         </ul>
     </nav>
-    <hr>
     <div class="link-outlet">
     </div>
     <script src="./js/app.js" type="module"></script>

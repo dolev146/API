@@ -1,6 +1,7 @@
 // import Ajax from './routes.js'
 function home(outlet) {
     if (outlet) {
+        outlet.innerHTML = "";
         let homediv = document.createElement("div");
         outlet.appendChild(homediv);
         homediv.innerHTML = "<div><h1 style=text-align:center>List of All the Coins</h1></div>";
@@ -22,8 +23,8 @@ function home(outlet) {
                 toggle_btn.classList.add("toggle_btn");
                 toggle_btn.setAttribute('type', 'checkbox');
                 newdiv.classList.add("div_style");
-                newdiv.innerHTML += `<span>${(data[i].symbol.toUpperCase())}<br><br>
-                ${data[i].name} </span><br>`;
+                newdiv.innerHTML += `<span>Symbol: ${(data[i].symbol.toUpperCase())}<br><br>
+                Name: ${data[i].name} </span><br>`;
                 containerInfo.appendChild(newdiv);
                 newdiv.appendChild(toggle_btn);
                 newdiv.appendChild(infoLink);
@@ -37,11 +38,13 @@ function home(outlet) {
 }
 function livereports(outlet) {
     if (outlet) {
+        outlet.innerHTML = "";
         outlet.innerHTML = "<h1> Live reports </h1>";
     }
 }
 function about(outlet) {
     if (outlet) {
+        outlet.innerHTML = "";
         outlet.innerHTML = "<h1>ABOUT</h1>";
         loadContent('./components/about/about.component.html', outlet);
         loadScript('./components/about/about.component.js');
