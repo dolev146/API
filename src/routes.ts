@@ -21,11 +21,11 @@ function home(outlet: HTMLElement | null) {
                 let newdiv = document.createElement('div')
                 newdiv.classList = "Coininside"
                 let toggle_btn = document.createElement('input')
+                toggle_btn.classList.add("toggle_btn")
+                toggle_btn.setAttribute('type', 'checkbox')
                 let infoLink = document.createElement('a')
                 infoLink.setAttribute('href', 'https://api.coingecko.com/api/v3/coins/list')
                 infoLink.innerHTML = "more Info"
-                toggle_btn.classList.add("toggle_btn")
-                toggle_btn.setAttribute('type', 'checkbox')
                 newdiv.classList.add("div_style")
                 newdiv.innerHTML += `<span>Symbol: ${(data[i].symbol.toUpperCase())}<br><br>
                 Name: ${data[i].name} </span><br>`
