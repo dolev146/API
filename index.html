@@ -5,110 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coins</title>
-    <style>
-        
-        .link-outlet {
-            width: 60vw;
-            height: 60vh;
-            margin-left: auto;
-            margin-right: auto;
 
-        }
-
-        .containerCoins {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: stretch;
-            flex-wrap: wrap;
-            overflow: auto;
-        }
-
-        .Coininside {
-            border: 2px solid lightgray;
-            width: 32.5%;
-            height: 25%;
-        }
-
-        ul {
-            border: 1px solid #e7e7e7;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #f3f3f3;
-        }
-
-        li {
-            float: left;
-            border-right: 1px solid #bbb;
-
-        }
-
-        li:last-child {
-            border-right: none;
-        }
-
-
-        li a {
-            display: block;
-            color: black;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        input {
-            float: right;
-            padding: 6px;
-            border: none;
-            margin-top: 8px;
-            margin-right: 16px;
-            font-size: 17px;
-        }
-
-        li a:hover {
-            background-color: rgb(150, 150, 150);
-        }
-
-        input[type=text] {
-            padding: 6px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
-        }
-
-         button {
-            padding: 6px;
-            margin-top: 8px;
-            margin-right: 16px;
-            background: #ddd;
-            font-size: 17px;
-            border: none;
-            cursor: pointer;
-        }
-         li > button + input[type=text]{
-            float:right;
-        }
-
-         button:hover {
-            background: #ccc;
-        }
-
-
-        .active {
-            background-color: #4CA;
-        }
-        input[type=checkbox]{
-            -webkit-appearance: none;
-            background: #c6c6c6;
-            outline: none;
-            border-radius: 20px;
-            box-shadow: inset 0 0 5px rgb(0,0,0,2);
-            transition: .5s;
-
-        }
-    </style>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/handmade.css">
+    
 </head>
 
 <body>
@@ -129,6 +29,35 @@
             </li>
         </ul>
     </nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
     <div class="link-outlet">
     </div>
     <script src="./js/app.js" type="module"></script>
